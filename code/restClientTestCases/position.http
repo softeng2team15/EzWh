@@ -1,0 +1,42 @@
+POST http://localhost:3001/api/position HTTP/1.1
+content-type: application/json
+
+{
+    "positionID":"800234543412",
+    "aisleID": "8002",
+    "row": "3454",
+    "col": "3412",
+    "maxWeight": 1000,
+    "maxVolume": 1000
+}
+
+
+
+###
+GET http://localhost:3001/api/positions HTTP/1.1
+###
+PUT  http://localhost:3001/api/position/800234543425 HTTP/1.1
+content-type: application/json
+
+{
+    "newAisleID": "8002",
+    "newRow": "3454",
+    "newCol": "3412",
+    "newMaxWeight": 1200,
+    "newMaxVolume": 600,
+    "newOccupiedWeight": 200,
+    "newOccupiedVolume":100
+}
+
+
+###
+PUT  http://localhost:3001/api/position/800234543412/changeID HTTP/1.1
+content-type: application/json
+
+{
+    "newPositionID": "123456789123"
+}
+###
+DELETE http://localhost:3001/api/position/123456789123 HTTP/1.1
+###
+

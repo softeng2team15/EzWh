@@ -1,0 +1,38 @@
+POST http://localhost:3001/api/internalOrders HTTP/1.1
+content-type: application/json
+
+{
+    "issueDate":"2021/11/29 09:33",
+    "state": "ACCEPTED",
+    "products": [{"SKUId":1,"description":"a product","price":10.99,"qty":2},
+                {"SKUId":2,"description":"another product","price":11.99,"qty":3}],
+    "customerId" : 1
+}
+
+###
+GET http://localhost:3001/api/internalOrders HTTP/1.1
+###
+GET http://localhost:3001/api/internalOrdersIssued HTTP/1.1
+###
+GET http://localhost:3001/api/internalOrdersAccepted HTTP/1.1
+###
+GET http://localhost:3001/api/internalOrders/8 HTTP/1.1
+###
+PUT http://localhost:3001/api/internalOrders/3 HTTP/1.1
+content-type: application/json
+
+{
+    "newState": "ACCEPTED"
+}
+###
+PUT http://localhost:3001/api/internalOrders/2 HTTP/1.1
+content-type: application/json
+
+{
+    "newState":"COMPLETED",
+    "products":[{"SkuID":1,"RFID":"12345678901234567890123456789016"},{"SkuID":2,"RFID":"12345678901234567890123456789038"}]
+}
+
+###
+DELETE http://localhost:3001/api/internalOrders/2 HTTP/1.1
+###

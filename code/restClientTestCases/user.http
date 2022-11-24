@@ -1,0 +1,82 @@
+POST http://localhost:3001/api/newUser HTTP/1.1
+content-type: application/json
+
+{
+        "username":"andrea@ezwh.com",
+        "name":"Andrea",
+        "surname" : "Perno",
+        "password" : "testpassword",
+        "type" : "clerk"
+
+}
+
+###
+GET http://localhost:3001/api/userinfo HTTP/1.1
+###
+GET http://localhost:3001/api/suppliers HTTP/1.1
+###
+GET http://localhost:3001/api/users HTTP/1.1
+###
+POST http://localhost:3001/api/managerSessions HTTP/1.1
+content-type: application/json
+
+{
+    "username":"manager1@ezwh.com",
+    "password" :"testpassword"
+}
+###
+POST http://localhost:3001/api/customerSessions HTTP/1.1
+content-type: application/json
+
+{
+    "username":"user1@ezwh.com",
+    "password" :"testpassword"
+}
+###
+POST http://localhost:3001/api/supplierSessions HTTP/1.1
+content-type: application/json
+
+{
+    "username":"supplier1@ezwh.com",
+    "password" :"testpassword"
+}
+###
+POST http://localhost:3001/api/clerkSessions HTTP/1.1
+content-type: application/json
+
+{
+    "username":"clerk1@ezwh.com",
+    "password" :"testpassword"
+}
+###
+POST http://localhost:3001/api/qualityEmployeeSessions HTTP/1.1
+content-type: application/json
+
+{
+    "username":"qualityEmployee1@ezwh.com",
+    "password" :"testpassword"
+}
+###
+POST http://localhost:3001/api/deliveryEmployeeSessions HTTP/1.1
+content-type: application/json
+
+{
+    "username":"deliveryEmployee1@ezwh.com",
+    "password" :"testpassword"
+}
+###
+POST http://localhost:3001/api/logout HTTP/1.1
+###
+PUT  http://localhost:3001/api/users/marta@ezwh.com HTTP/1.1
+content-type: application/json
+
+
+    {
+        "oldType" : "qualityEmployee",
+        "newType" : "clerk"
+    }
+
+###
+DELETE http://localhost:3001/api/users/marta@ezwh.com/clerk HTTP/1.1
+###
+

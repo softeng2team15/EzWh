@@ -1,0 +1,19 @@
+POST http://localhost:3001/api/returnOrder HTTP/1.1
+content-type: application/json
+
+ {
+    "returnDate":"2021/11/29 09:33",
+    "products": [{"SKUId":12,"description":"a product","price":10.99,"RFID":"12345678901234567890123456789016"},
+                {"SKUId":180,"description":"another product","price":11.99,"RFID":"12345678901234567890123456789038"}],
+    "restockOrderId" : 5
+}
+
+
+###
+GET http://localhost:3001/api/returnOrders HTTP/1.1
+###
+GET http://localhost:3001/api/returnOrders/185 HTTP/1.1
+###
+
+DELETE http://localhost:3001/api/returnOrder/185 HTTP/1.1
+###

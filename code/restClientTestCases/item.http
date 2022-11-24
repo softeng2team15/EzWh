@@ -1,0 +1,27 @@
+POST http://localhost:3001/api/item HTTP/1.1
+content-type: application/json
+
+{
+    "id" : 12,
+    "description" : "a new item",
+    "price" : 12.99,
+    "SKUId" : 1,
+    "supplierId" : 2
+}
+
+###
+GET http://localhost:3001/api/items HTTP/1.1
+###
+GET http://localhost:3001/api/items/1 HTTP/1.1
+###
+PUT  http://localhost:3001/api/item/2 HTTP/1.1
+content-type: application/json
+
+{
+    "newDescription" : "wwwww",
+    "newPrice" : 10.99
+}
+
+###
+DELETE http://localhost:3001/api/items/6 HTTP/1.1
+###
